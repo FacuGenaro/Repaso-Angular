@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <br>
+        <h5 class="card-title">Synopsis</h5>
+        <p class="card-text">{{ pageJson.synopsis }}</p>
+        <h5 class="card-title">Characters and Seiyuus</h5>
+        <div class="container-fluid">
+            <table class="table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Photo</th>
+                    <th>Role</th>
+                    <th>Seiyuu</th>
+                </tr>
+                <tr *ngFor="let character of characterJson.characters">
+                    <td>{{character.name}}</td>
+                    <td><img src="{{ character.image_url }}" alt="" class="img-responsive" width="40%"></td>
+                    <td>{{character.role}}</td>
+                    <td>
+                        <span *ngIf="character.voice_actors[0] != null"> {{character.voice_actors[0].name}} </span>
+                        <span *ngIf="character.voice_actors[0] == null"> This character doesn't talk </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="card-header">
+        <form class="form-inline my-2 my-lg-0 float-right">
+            <input class="form-control mr-sm-2" type="search" ng-model="busqueda" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" ng-click="search()" type="submit">Search</button>
+        </form>
+        <h4> {{ pageJson.title }} ({{ pageJson.title_japanese }}) <br>
+            <h6> Alternative titles: {{ pageJson.title_synonyms }}</h6>
+        </h4>
+    </div>
+</div>
